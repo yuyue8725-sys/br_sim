@@ -1,0 +1,487 @@
+<robot name="br">
+  <link name="base_link">
+    <inertial>
+      <origin xyz="-0.0104941874573322 0.00894120214595673 0.0153316280803506" rpy="0 0 0" />
+      <mass value="4.12809976768818" />
+      <inertia ixx="0.01469692224257" ixy="2.17307215639738E-08" ixz="2.36745227382626E-07" iyy="0.0127991164282382" iyz="-6.69960226830507E-06" izz="0.0270682217010851" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://br_sim/urdf/meshes/base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <!-- 整机唯一碰撞体：box 底面 -0.055 略低于轮子底面 -0.0517，
+           由 box 承重；顶面 0.16 低于雷达（z=0.176），避免雷达被包住。
+           只用 box 是为了让 ODE 接触稳定、且不产生锁死旋转的摩擦扭矩。 -->
+      <origin xyz="0 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.72 0.215" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link1_1">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://br_sim/urdf/meshes/front_support/left_arm.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <inertial>
+      <origin xyz="-0.0494270619221777 0.00879554549824092 -0.0581642445318998" rpy="0 0 0" />
+      <mass value="0.0280201406431382" />
+      <inertia ixx="7.35551596090098e-06" ixy="1.39070020006676e-07" ixz="-4.78067616631314e-06" iyy="1.19789488190971e-05" iyz="1.63653432710955e-07" izz="5.79231042842305e-06" />
+    </inertial>
+  </link>
+  <joint name="joint1_1" type="fixed">
+    <origin xyz="0.317949999999999 0.232500007712663 0.0579999999999996" rpy="1.5707963267949 -1.5707963267949 0" />
+    <parent link="base_link" />
+    <child link="link1_1" />
+  </joint>
+  <link name="link2_1">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://br_sim/urdf/meshes/front_support/right_arm.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <inertial>
+      <origin xyz="-0.0494270623891037 -0.00870248895505554 -0.0581642457923499" rpy="0 0 0" />
+      <mass value="0.0280201406431391" />
+      <inertia ixx="7.35114693622507e-06" ixy="-2.1914820607603e-07" ixz="-4.78067851562726e-06" iyy="1.19789538829429e-05" iyz="-2.57887015931239e-07" izz="5.78793876529406e-06" />
+    </inertial>
+  </link>
+  <joint name="joint2_1" type="fixed">
+    <origin xyz="-0.317750000000001 0.232500007712664 0.0579999999999999" rpy="1.5707963267949 -1.5707963267949 0" />
+    <parent link="base_link" />
+    <child link="link2_1" />
+  </joint>
+  <link name="link3_1_1">
+    <inertial>
+      <origin xyz="0.0116664782562558 -0.0155182624811523 -0.00706589542671332" rpy="0 0 0" />
+      <mass value="0.788665603293014" />
+      <inertia ixx="0.00398201976780938" ixy="4.73753204013429E-15" ixz="1.03000396120238E-06" iyy="0.00250779382397628" iyz="1.65426720135718E-05" izz="0.00483222236876998" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://br_sim/urdf/meshes/link3_1_1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="joint3_1_1" type="fixed">
+    <origin xyz="-4.99999999996614E-05 0.2075 0" rpy="1.5707963267949 -1.5707963267949 0" />
+    <parent link="base_link" />
+    <child link="link3_1_1" />
+  </joint>
+  <link name="link3_2_1">
+    <inertial>
+      <origin xyz="0.00355520218783562 -0.000131364230598341 0.000119770378929962" rpy="0 0 0" />
+      <mass value="0.179718254061765" />
+      <inertia ixx="0.000136129578572082" ixy="1.06854111359834E-07" ixz="5.96716755129148E-09" iyy="0.000110077639257163" iyz="-2.45205766978258E-07" izz="8.25917017461938E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://br_sim/urdf/meshes/link3_2_1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="joint3_2_1" type="fixed">
+    <origin xyz="-0.0191749999999914 -0.225000000000011 -0.0175000000000054" rpy="0 0 0" />
+    <parent link="link3_1_1" />
+    <child link="link3_2_1" />
+  </joint>
+  <link name="link3_2_2">
+    <inertial>
+      <origin xyz="-3.88933546497383E-05 -0.0210397291074122 1.59962135226621E-06" rpy="0 0 0" />
+      <mass value="0.0889749821511124" />
+      <inertia ixx="5.62779935765416E-05" ixy="2.20647474468985E-12" ixz="-2.50807988633272E-12" iyy="0.000104292438643698" iyz="-7.14739929142528E-10" izz="5.6143561475795E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://br_sim/urdf/meshes/link3_2_2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="joint3_2_2" type="continuous">
+    <origin xyz="0.00999999999998635 0.0138000000000051 0" rpy="0 0 0" />
+    <parent link="link3_2_1" />
+    <child link="link3_2_2" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.001" friction="0.0" />
+    <limit effort="5.0" velocity="8.0" />
+  </joint>
+  <link name="link3_3_1">
+    <inertial>
+      <origin xyz="0.00374615809944345 0.000368327372161303 0.000120821347111333" rpy="0 0 0" />
+      <mass value="0.178152761460902" />
+      <inertia ixx="0.000135350138918116" ixy="-9.82426890475265E-08" ixz="5.96816416335317E-09" iyy="0.00010927134452101" iyz="2.4520578632199E-07" izz="8.25518489816039E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://br_sim/urdf/meshes/link3_3_1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="joint3_3_1" type="fixed">
+    <origin xyz="-0.0191749999999912 0.224700000000008 -0.017500000000005" rpy="0 0 0" />
+    <parent link="link3_1_1" />
+    <child link="link3_3_1" />
+  </joint>
+  <link name="link3_3_2">
+    <inertial>
+      <origin xyz="-3.88893877905638E-05 0.0210397448028213 1.57981095139093E-06" rpy="0 0 0" />
+      <mass value="0.0889749941144419" />
+      <inertia ixx="5.62779943455652E-05" ixy="-6.14340891533126E-13" ixz="-7.23584333264631E-12" iyy="0.000104292450540725" iyz="7.15185421053288E-10" izz="5.61435726718154E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://br_sim/urdf/meshes/link3_3_2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="joint3_3_2" type="continuous">
+    <origin xyz="0.00999999999998591 -0.0138000000000053 0" rpy="0 0 0" />
+    <parent link="link3_3_1" />
+    <child link="link3_3_2" />
+    <axis xyz="0 -1 0" />
+    <dynamics damping="0.001" friction="0.0" />
+    <limit effort="5.0" velocity="8.0" />
+  </joint>
+  <link name="link4_1">
+    <inertial>
+      <origin xyz="0.000100000000001321 -0.0454618323334954 0.084705968903574" rpy="0 0 0" />
+      <mass value="0.238767567799155" />
+      <inertia ixx="0.00169017811257077" ixy="-1.95663120028074E-21" ixz="-1.06225572173344E-19" iyy="0.00167653238604338" iyz="7.9589481403557E-07" izz="2.18578155398606E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://br_sim/urdf/meshes/link4_1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="joint4_1" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="link4_1" />
+  </joint>
+  <link name="link5_1_1">
+    <inertial>
+      <origin xyz="0.0103450524834708 9.04640123422507E-05 0.0112172871692453" rpy="0 0 0" />
+      <mass value="0.844102629358632" />
+      <inertia ixx="0.0042855694311282" ixy="-4.73798350684287E-15" ixz="-1.03000396119949E-06" iyy="0.00266028015640331" iyz="3.15596500520637E-16" izz="0.00498336887358115" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://br_sim/urdf/meshes/link5_1_1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="joint5_1_1" type="fixed">
+    <origin xyz="0.000150000000000206 -0.207499999999999 0" rpy="1.5707963267949 -1.5707963267949 0" />
+    <parent link="base_link" />
+    <child link="link5_1_1" />
+  </joint>
+  <link name="link5_2_1">
+    <inertial>
+      <origin xyz="0.00372877931610188 0.000368327669866941 5.96139246356042E-06" rpy="0 0 0" />
+      <mass value="0.1781527614609" />
+      <inertia ixx="0.000135289723728495" ixy="-9.90307432380291E-08" ixz="-1.91084686720475E-07" iyy="0.000109271344521015" iyz="2.40028430503553E-07" izz="8.26122641712176E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://br_sim/urdf/meshes/link5_2_1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="joint5_2_1" type="fixed">
+    <origin xyz="-0.0191749999999844 -0.224799999999998 0.0174999999999981" rpy="0 0 0" />
+    <parent link="link5_1_1" />
+    <child link="link5_2_1" />
+  </joint>
+  <link name="link5_2_2">
+    <inertial>
+      <origin xyz="-3.84179103837257E-05 0.0210397416085224 1.52112439011365E-06" rpy="0 0 0" />
+      <mass value="0.0889749941227164" />
+      <inertia ixx="5.62784525346375E-05" ixy="2.11255809061725E-10" ixz="1.48018304857176E-09" iyy="0.000104292450558982" iyz="6.83292265116555E-10" izz="5.61431145010192E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://br_sim/urdf/meshes/link5_2_2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="joint5_2_2" type="continuous">
+    <origin xyz="0.0099999999999838 -0.0138000000000057 0" rpy="0 0 0" />
+    <parent link="link5_2_1" />
+    <child link="link5_2_2" />
+    <axis xyz="0 -1 0" />
+    <dynamics damping="0.001" friction="0.0" />
+    <limit effort="5.0" velocity="8.0" />
+  </joint>
+  <link name="link5_3_1">
+    <inertial>
+      <origin xyz="0.00380078098908176 -0.000943737466362005 5.66962171832941E-06" rpy="0 0 0" />
+      <mass value="0.187337128560931" />
+      <inertia ixx="0.00013645644250061" ixy="1.07642165550892E-07" ixz="-1.91085683332366E-07" iyy="0.000110712459188732" iyz="-2.40028411152961E-07" izz="8.30393960539557E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://br_sim/urdf/meshes/link5_3_1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="joint5_3_1" type="fixed">
+    <origin xyz="-0.0191749999999905 0.224899999999996 0.0174999999999982" rpy="0 0 0" />
+    <parent link="link5_1_1" />
+    <child link="link5_3_1" />
+  </joint>
+  <link name="link5_3_2">
+    <inertial>
+      <origin xyz="-3.84218806924741E-05 -0.0210397440864145 1.51836401951488E-06" rpy="0 0 0" />
+      <mass value="0.0889749821412798" />
+      <inertia ixx="5.62784517687033E-05" ixy="-2.09651861652698E-10" ixz="1.48492457954077E-09" iyy="0.000104292438652983" iyz="-6.82848337849084E-10" izz="5.61431032928303E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://br_sim/urdf/meshes/link5_3_2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="joint5_3_2" type="continuous">
+    <origin xyz="0.00999999999999046 0.0138000000000037 0" rpy="0 0 0" />
+    <parent link="link5_3_1" />
+    <child link="link5_3_2" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.001" friction="0.0" />
+    <limit effort="5.0" velocity="8.0" />
+  </joint>
+  <link name="mid360_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.265" />
+      <inertia ixx="0.0002" ixy="0" ixz="0" iyy="0.0002" iyz="0" izz="0.0002" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.57079632679 0 0" />
+      <geometry>
+        <mesh filename="package://br_sim/urdf/meshes/mid360_housing.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="mid360_housing_mat">
+        <color rgba="0.32 0.35 0.38 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.57079632679 0 0" />
+      <geometry>
+        <mesh filename="package://br_sim/urdf/meshes/mid360_dome.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="mid360_dome_mat">
+        <color rgba="0.055 0.06 0.065 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="mid360_joint" type="fixed">
+    <origin xyz="-0.19755 -0.25764 0.17592" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="mid360_link" />
+  </joint>
+  <gazebo reference="link3_2_2">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+  </gazebo>
+  <gazebo reference="link3_3_2">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+  </gazebo>
+  <gazebo reference="link5_2_2">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+  </gazebo>
+  <gazebo reference="link5_3_2">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+  </gazebo>
+  <link name="front_support_left_wheel">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.00311334896034869" />
+      <inertia ixx="2.08075465315429e-07" ixy="0" ixz="0" iyy="3.64261786027615e-07" iyz="0" izz="2.08075465315429e-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://br_sim/urdf/meshes/front_support/left_wheel.stl" />
+      </geometry>
+      <material name="cad_wheel">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="front_support_left_wheel_joint" type="continuous">
+    <parent link="link1_1" />
+    <child link="front_support_left_wheel" />
+    <origin xyz="-0.0957517298733054 0.00783916853833944 -0.112677728400114" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.000001" friction="0.0" />
+  </joint>
+  <gazebo reference="front_support_left_wheel">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+  </gazebo>
+  <link name="front_support_right_wheel">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.00311334896034879" />
+      <inertia ixx="2.08075463574203e-07" ixy="0" ixz="0" iyy="3.64261784961438e-07" iyz="0" izz="2.08075463574203e-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://br_sim/urdf/meshes/front_support/right_wheel.stl" />
+      </geometry>
+      <material name="cad_wheel">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="front_support_right_wheel_joint" type="continuous">
+    <parent link="link2_1" />
+    <child link="front_support_right_wheel" />
+    <origin xyz="-0.0957517256709684 -0.00712918792851269 -0.112677717056054" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.000001" friction="0.0" />
+  </joint>
+  <gazebo reference="front_support_right_wheel">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+  </gazebo>
+  <!-- ==================== 仿真传感器与驱动插件（SLAM 导航用） ==================== -->
+
+  <!-- MID360 激光雷达传感器（360°、40m 量程） -->
+  <gazebo reference="mid360_link">
+    <sensor name="mid360_lidar" type="ray">
+      <pose>0 0 0 0 0 0</pose>
+      <always_on>true</always_on>
+      <update_rate>10.0</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.141592653589793</min_angle>
+            <max_angle>3.141592653589793</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.15</min>
+          <max>40.0</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="mid360_lidar_plugin" filename="libgazebo_ros_ray_sensor.so">
+        <ros>
+          <remapping>~/out:=/scan</remapping>
+        </ros>
+        <output_type>sensor_msgs/LaserScan</output_type>
+        <frame_name>mid360_link</frame_name>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <!-- IMU 惯性测量单元 -->
+  <gazebo reference="base_link">
+    <!-- 机器人由 planar_move（运动学插件）用 SetLinearVel/SetAngularVel 驱动。
+         ODE 的接触摩擦是唯一会「吃掉」设定速度的因素：μ=1.0 时 6 个轮子 +
+         底盘大面积贴地，摩擦力矩直接把 SetAngularVel 抹平（实测 wz=1.0 rad/s
+         走 3 s，真实 yaw 只变化 0.08 rad）。这里 μ 设为 0，并给较硬的接触参数
+         防止零摩擦下回弹/穿刺导致翻车。 -->
+    <mu1>0.0</mu1>
+    <mu2>0.0</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>0.1</maxVel>
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>100.0</update_rate>
+      <plugin name="imu_plugin" filename="libgazebo_ros_imu_sensor.so">
+        <ros>
+          <remapping>~/out:=/imu</remapping>
+        </ros>
+        <frame_name>base_link</frame_name>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <!-- 全向运动插件：接收 cmd_vel(vx,vy,wz)，发布 odom 和 TF odom->base_link -->
+  <gazebo>
+    <plugin name="planar_move" filename="libgazebo_ros_planar_move.so">
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_link</robot_base_frame>
+      <update_rate>100.0</update_rate>
+      <publish_rate>50.0</publish_rate>
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+    </plugin>
+  </gazebo>
+
+</robot>

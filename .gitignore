@@ -1,0 +1,19 @@
+# ---- colcon 构建产物（不要上传）----
+build/
+install/
+log/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# ---- Gazebo 生成的模型缓存 ----
+.gazebo/
+
+# 注意：不要忽略 maps/*.pgm —— 那是需要长期保存的地图

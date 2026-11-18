@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <world name="robocon_world">
+
+    <physics type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+
+    <gravity>0 0 -9.8</gravity>
+
+    <!-- 注意：libgazebo_ros_init / libgazebo_ros_factory 是 server 插件，
+         由 gazebo_ros 的 gazebo.launch.py 通过 gzserver -s 参数自动加载，
+         不能写在这里（否则报 "incorrect plugin type"）。 -->
+
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <!-- 比赛场地（静态模型） -->
+    <include>
+      <uri>model://robocon_ground</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+
+  </world>
+</sdf>

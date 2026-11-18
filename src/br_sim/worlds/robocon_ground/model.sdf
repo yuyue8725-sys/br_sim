@@ -1,0 +1,1969 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.6">
+  <model name="robocon_ground">
+    <static>true</static>
+    <link name="field">
+      <visual name="field_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/Untitled.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="Ground_Red">
+        <pose>0 2.75 -0.01 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>11 5.5 0.02</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Ground_Blue">
+        <pose>0 -2.75 -0.01 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>11 5.5 0.02</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Boundary_Wall_Right">
+        <pose>0 -5.55 0.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>11 0.1 0.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Boundary_Wall_Left">
+        <pose>0 5.55 0.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>11 0.1 0.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Boundary_Wall_Front">
+        <pose>-5.55 0 0.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 11 0.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Boundary_Wall_Back">
+        <pose>5.55 0 0.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 11 0.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube">
+        <pose>0 0 0.3 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>6 6 0.6</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_slope">
+        <pose>0.9483288706 3.5 0.2901408524 0 0.1679007006 0</pose>
+        <geometry>
+          <box>
+            <size>3.549919827 1 0.02</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_00">
+        <pose>-0.75 3.5 0.2898346015 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.579669509</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_01">
+        <pose>-0.65 3.5 0.2813597795 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.562719865</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_02">
+        <pose>-0.55 3.5 0.2728849575 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.545770221</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_03">
+        <pose>-0.45 3.5 0.2644101355 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.528820577</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_04">
+        <pose>-0.35 3.5 0.2559353135 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.511870933</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_05">
+        <pose>-0.25 3.5 0.2474604915 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.494921289</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_06">
+        <pose>-0.15 3.5 0.2389856695 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.477971645</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_07">
+        <pose>-0.05 3.5 0.2305108475 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.461022001</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_08">
+        <pose>0.05 3.5 0.2220360255 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.444072357</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_09">
+        <pose>0.15 3.5 0.2135612035 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.427122713</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_10">
+        <pose>0.25 3.5 0.2050863815 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.410173069</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_11">
+        <pose>0.35 3.5 0.1966115595 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.393223425</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_12">
+        <pose>0.45 3.5 0.1881367375 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.376273781</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_13">
+        <pose>0.55 3.5 0.1796619155 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.359324137</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_14">
+        <pose>0.65 3.5 0.1711870935 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.342374493</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_15">
+        <pose>0.75 3.5 0.1627122715 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.325424849</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_16">
+        <pose>0.85 3.5 0.1542374495 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.308475205</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_17">
+        <pose>0.95 3.5 0.1457626275 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.291525561</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_18">
+        <pose>1.05 3.5 0.1372878055 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.274575917</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_19">
+        <pose>1.15 3.5 0.1288129835 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.257626273</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_20">
+        <pose>1.25 3.5 0.1203381615 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.240676629</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_21">
+        <pose>1.35 3.5 0.1118633395 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.223726985</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_22">
+        <pose>1.45 3.5 0.1033885175 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.206777341</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_23">
+        <pose>1.55 3.5 0.0949136955 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.189827697</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_24">
+        <pose>1.65 3.5 0.0864388735 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.172878053</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_25">
+        <pose>1.75 3.5 0.0779640515 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.155928409</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_26">
+        <pose>1.85 3.5 0.0694892295 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.138978765</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_27">
+        <pose>1.95 3.5 0.0610144075 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.122029121</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_28">
+        <pose>2.05 3.5 0.05253958551 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.105079477</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_29">
+        <pose>2.15 3.5 0.0440647635 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.08812983299</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_30">
+        <pose>2.25 3.5 0.03558994151 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.07118018899</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_31">
+        <pose>2.35 3.5 0.0271151195 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.05423054499</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_32">
+        <pose>2.45 3.5 0.0186402975 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.03728090099</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_33">
+        <pose>2.55 3.5 0.01016547551 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.02033125699</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.001_fill_34">
+        <pose>2.65 3.5 0.001690653505 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.00338161299</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.002">
+        <pose>-1.75 3.5 0.075 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1.9 1 0.15</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.003">
+        <pose>-1.6 3.5 0.225 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1.6 1 0.15</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.004">
+        <pose>-1.45 3.5 0.375 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1.3 1 0.15</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.005">
+        <pose>-1.3 3.5 0.525 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1 1 0.15</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_slope">
+        <pose>0.9483288706 -3.5 0.2901408524 0 0.1679007006 0</pose>
+        <geometry>
+          <box>
+            <size>3.549919827 1 0.02</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_00">
+        <pose>-0.75 -3.5 0.2898346015 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.579669509</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_01">
+        <pose>-0.65 -3.5 0.2813597795 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.562719865</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_02">
+        <pose>-0.55 -3.5 0.2728849575 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.545770221</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_03">
+        <pose>-0.45 -3.5 0.2644101355 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.528820577</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_04">
+        <pose>-0.35 -3.5 0.2559353135 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.511870933</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_05">
+        <pose>-0.25 -3.5 0.2474604915 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.494921289</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_06">
+        <pose>-0.15 -3.5 0.2389856695 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.477971645</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_07">
+        <pose>-0.05 -3.5 0.2305108475 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.461022001</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_08">
+        <pose>0.05 -3.5 0.2220360255 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.444072357</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_09">
+        <pose>0.15 -3.5 0.2135612035 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.427122713</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_10">
+        <pose>0.25 -3.5 0.2050863815 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.410173069</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_11">
+        <pose>0.35 -3.5 0.1966115595 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.393223425</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_12">
+        <pose>0.45 -3.5 0.1881367375 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.376273781</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_13">
+        <pose>0.55 -3.5 0.1796619155 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.359324137</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_14">
+        <pose>0.65 -3.5 0.1711870935 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.342374493</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_15">
+        <pose>0.75 -3.5 0.1627122715 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.325424849</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_16">
+        <pose>0.85 -3.5 0.1542374495 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.308475205</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_17">
+        <pose>0.95 -3.5 0.1457626275 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.291525561</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_18">
+        <pose>1.05 -3.5 0.1372878055 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.274575917</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_19">
+        <pose>1.15 -3.5 0.1288129835 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.257626273</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_20">
+        <pose>1.25 -3.5 0.1203381615 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.240676629</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_21">
+        <pose>1.35 -3.5 0.1118633395 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.223726985</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_22">
+        <pose>1.45 -3.5 0.1033885175 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.206777341</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_23">
+        <pose>1.55 -3.5 0.0949136955 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.189827697</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_24">
+        <pose>1.65 -3.5 0.0864388735 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.172878053</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_25">
+        <pose>1.75 -3.5 0.0779640515 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.155928409</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_26">
+        <pose>1.85 -3.5 0.0694892295 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.138978765</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_27">
+        <pose>1.95 -3.5 0.0610144075 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.122029121</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_28">
+        <pose>2.05 -3.5 0.05253958551 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.105079477</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_29">
+        <pose>2.15 -3.5 0.0440647635 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.08812983299</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_30">
+        <pose>2.25 -3.5 0.03558994151 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.07118018899</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_31">
+        <pose>2.35 -3.5 0.0271151195 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.05423054499</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_32">
+        <pose>2.45 -3.5 0.0186402975 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.03728090099</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_33">
+        <pose>2.55 -3.5 0.01016547551 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.02033125699</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.006_fill_34">
+        <pose>2.65 -3.5 0.001690653505 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 1 0.00338161299</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.007">
+        <pose>-1.75 -3.5 0.075 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1.9 1 0.15</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.008">
+        <pose>-1.6 -3.5 0.225 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1.6 1 0.15</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.009">
+        <pose>-1.45 -3.5 0.375 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1.3 1 0.15</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.010">
+        <pose>-1.3 -3.5 0.525 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1 1 0.15</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.011">
+        <pose>-3 0 0.625 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 6 0.05</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.012">
+        <pose>3 0 0.625 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 6 0.05</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.013">
+        <pose>1.1 3 0.625 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>3.8 0.05 0.05</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.014">
+        <pose>-2.4 3 0.625 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1.2 0.05 0.05</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.015">
+        <pose>1.1 -3 0.625 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>3.8 0.05 0.05</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.016">
+        <pose>-2.4 -3 0.625 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1.2 0.05 0.05</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.017">
+        <pose>0 0 0.75 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>3 3 0.3</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.018">
+        <pose>0 1.65 0.675 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1 0.3 0.15</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.019">
+        <pose>0 -1.65 0.675 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1 0.3 0.15</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cylinder">
+        <pose>4.15 0 0.25 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.13500000000000023</radius>
+            <length>0.5</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cylinder.001">
+        <pose>0 0 1.3 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.135</radius>
+            <length>0.7999999999999999</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.020">
+        <pose>-3.8 -0.5 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.021">
+        <pose>-3.8 -0.4 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.022">
+        <pose>-3.8 0.05 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.023">
+        <pose>-3.8 -0.05 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.024">
+        <pose>-3.8 0.5 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.025">
+        <pose>-3.8 0.4 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.026">
+        <pose>-4 0.275 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.027">
+        <pose>-4 0.175 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.028">
+        <pose>-4 -0.175 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.029">
+        <pose>-4 -0.275 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.030">
+        <pose>-4.2 0.5 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.031">
+        <pose>-4.2 0.4 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.032">
+        <pose>-4.2 -0.4 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.033">
+        <pose>-4.2 -0.5 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.034">
+        <pose>-4.4 0.275 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.035">
+        <pose>-4.4 0.175 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.036">
+        <pose>-4.4 -0.175 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.037">
+        <pose>-4.4 -0.275 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.038">
+        <pose>-4.6 0.5 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.039">
+        <pose>-4.6 0.4 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.040">
+        <pose>-4.6 0.05 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.041">
+        <pose>-4.6 -0.05 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.042">
+        <pose>-4.6 -0.4 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Cube.043">
+        <pose>-4.6 -0.5 0.13 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.1 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+  </model>
+</sdf>
